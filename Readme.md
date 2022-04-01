@@ -8,7 +8,7 @@ To start the project follow the below steps (Linux, Mac):
 - ```sudo docker-compose build  ```
 - ```sudo docker-compose up -d ```
 - ```sudo docker-compose exec web python manage.py migrate ```
-- * if the migrate process failed try again, sometimes this happens
+- * ***if the migrate process failed try again, sometimes this happens, docker depends on problem***
 
 open project at http://0.0.0.0:8000 or http://127.0.0.1:8000, the index page is a swagger documentation which can be used interactively to test the charging end-point. The example input from pdf is located in exampe.json file in the project root directory. 
 ## Run test cases 

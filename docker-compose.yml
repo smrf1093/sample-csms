@@ -17,10 +17,11 @@ services:
       PGADMIN_CONFIG_SERVER_MODE: 'False'
     ports:
       - "${PGADMIN_PORT:-5050}:80"
-    restart: unless-stopped
+    depends_on:
+      - db
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command:  python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
