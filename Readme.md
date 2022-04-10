@@ -21,9 +21,9 @@ There is only one test case for charging view that can be run using the followin
 
 There are three docker services as follow:
 
-- Postgres: this is progres database backend 
-- Pgadmin: this is an admin application for managing the postgres database
-- Web: this is a custom image which is build using the Dockerfile in the directory, contains the django source code and build based on a python image and requirements.txt 
+- Postgres: Postgresql is used for database
+- Pgadmin: Pgadmin for managing postgresql more easily
+- Web: The custom docker file that build the image based on requirements for the Django backend
 
 # Technical description
 The price calculation section is located under the views.py in the charging app, api sub-directory that is located in apps folder. the view name is ChargeHandlingView. this view takes all the inputs as post parameters. There is a serializer for validation of inputs. Validation can be more comprehensive.
